@@ -1,0 +1,19 @@
+<ion-tabs>
+  <ion-tab-bar slot="bottom">
+
+    <ion-tab-button tab="reports">
+      <ion-icon name="pencil-outline"></ion-icon>
+      <ion-label>Reports</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="tables">
+      <ion-icon name="build-outline"></ion-icon>
+      <ion-label>Tables</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button [tab]="'account/'+uid">
+      <ion-icon name="people-outline"></ion-icon>      
+      <ion-label>Account</ion-label>
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

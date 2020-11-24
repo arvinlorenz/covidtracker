@@ -1,0 +1,173 @@
+<form [formGroup]="form">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Business Name</ion-label>
+          <ion-input 
+            type="text"
+            autocapitalize="words"
+            formControlName="businessName"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label>Business Type</ion-label>
+          <ion-select placeholder="Business Type" formControlName="businessType">
+            <ion-select-option value="cafe">Cafe</ion-select-option>
+            <ion-select-option value="restaurant">Restaurant</ion-select-option>
+            <ion-select-option value="bar">Bar</ion-select-option>
+            <ion-select-option value="pub">Pub</ion-select-option>
+          </ion-select>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+  <div formGroupName="address">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Street</ion-label>
+            <ion-input 
+              type="text"
+              formControlName="street"></ion-input>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size-sm="3">
+          <ion-item>
+            <ion-label position="floating">Suburb</ion-label>
+            <ion-input 
+              type="text"
+              formControlName="suburb"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="3" offset-sm="3">
+          <ion-item>
+            <ion-label position="floating">Zip Code</ion-label>
+            <ion-input 
+              type="text"
+              formControlName="zip"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col size-sm="3">
+          <ion-item>
+            <ion-label position="floating">Country</ion-label>
+            <ion-input 
+              type="text"
+              formControlName="country"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+    
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">ABN/TFN</ion-label>
+          <ion-input 
+            type="text"
+            formControlName="abntfn"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Fullname</ion-label>
+          <ion-input 
+            type="text"
+            autocapitalize="words"
+            formControlName="fullname"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="!editMode">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input 
+            type="email"
+            formControlName="email"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="!editMode">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input 
+            type="password"
+            formControlName="password"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-grid *ngIf="!editMode">
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input 
+            type="password"
+            formControlName="confirmPassword"></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</form>
+
+
+<ion-grid>
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3">
+      <ion-button color="primary" (click)="save()" expand="block" [disabled]="!form?.valid">{{ editMode ? 'Update' : 'Register' }}</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid *ngIf="!editMode">
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3">
+      <div class="ion-text-center">
+        <ion-button 
+        type="button"
+        color="primary" 
+        fill="clear" 
+        expand="full"
+        (click)="goToLogin()">
+        Login
+      </ion-button>
+      </div>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+

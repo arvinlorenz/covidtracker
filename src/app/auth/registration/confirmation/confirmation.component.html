@@ -1,0 +1,79 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      {{ !editMode ? 'Thanks for registering. Please confirm details.' : 'Account details will be updated. Please confirm details.'}}
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>Business Name</ion-label>
+      <ion-text>
+        {{ userDetails?.businessName }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Business Type</ion-label>
+      <ion-text>
+        {{ userDetails?.businessType }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>ABN/TFN</ion-label>
+      <ion-text>
+        {{ userDetails?.abntfn }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Contact Person</ion-label>
+      <ion-text>
+        {{ userDetails?.fullname }}
+      </ion-text>
+    </ion-item>
+    <ion-item *ngIf="!editMode">
+      <ion-label>Email</ion-label>
+      <ion-text>
+        {{ userDetails?.email }}
+      </ion-text>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Street</ion-label>
+      <ion-text>
+        {{ userDetails?.address?.street }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Suburb</ion-label>
+      <ion-text>
+        {{ userDetails?.address?.suburb }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Zip</ion-label>
+      <ion-text>
+        {{ userDetails?.address?.zip }}
+      </ion-text>
+    </ion-item>
+    <ion-item>
+      <ion-label>Country</ion-label>
+      <ion-text>
+        {{ userDetails?.address?.country }}
+      </ion-text>
+    </ion-item>
+  </ion-list>
+
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button color="primary" (click)="confirm()">Confirm</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+</ion-content>

@@ -1,0 +1,20 @@
+<ion-grid>
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3">
+      <ion-item>
+        <ion-label position="floating">Number of tables</ion-label>
+        <ion-input 
+          type="number"
+          [(ngModel)]="tableNumber"></ion-input>
+      </ion-item>
+    </ion-col>
+  </ion-row>
+</ion-grid>
+
+<ion-grid>
+  <ion-row>
+    <ion-col size-sm="6" offset-sm="3">
+      <ion-button color="primary" (click)="create()" expand="block">Create</ion-button>
+    </ion-col>
+  </ion-row>
+</ion-grid>

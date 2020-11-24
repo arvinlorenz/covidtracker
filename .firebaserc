@@ -1,0 +1,6 @@
+{
+  "projects": {
+    "default": "covidtracker-3db1b",
+    "staging": "contact-trace-and-menu"
+  }
+}

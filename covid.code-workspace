@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../order-process"
+		},
+		{
+			"path": "../harbor/ionic"
+		},
+		{
+			"path": "../coverform/frontend/coverform-frontend"
+		},
+		{
+			"path": "../ionic/ionic-angular-course"
+		}
+	]
+}

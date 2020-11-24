@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Thanks for checking in.
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="dismiss()">Close</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <ion-list>
+    <ion-item>
+      <ion-label>{{name}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{phoneNumber}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ dateAndTime | date:'fullDate'}} </ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ dateAndTime | date:'h:mm a z'}}</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-label>{{ email }}</ion-label>
+    </ion-item>
+   </ion-list>
+   
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="12" class="ion-text-center">
+        <ion-button color="primary" (click)="addAnother()">Add another guest</ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  
+</ion-content>
