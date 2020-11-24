@@ -9,6 +9,7 @@ import { TablePageRoutingModule } from './table-routing.module';
 import { TablePage } from './table.page';
 import { TableSetComponent } from './table-set/table-set.component';
 import { TableSaveComponent } from './table-save/table-save.component';
+import { TableConfirmModalComponent } from './table-save/table-confirm-modal/table-confirm-modal.component';
 
 @NgModule({
   imports: [
@@ -18,7 +19,7 @@ import { TableSaveComponent } from './table-save/table-save.component';
     TablePageRoutingModule,
     ReactiveFormsModule,
   ],
-  declarations: [TablePage, TableSetComponent, TableSaveComponent],
+  declarations: [TablePage, TableSetComponent, TableSaveComponent, TableConfirmModalComponent],
   exports: [TableSaveComponent]
 })
 export class TablePageModule {}
